@@ -8,7 +8,7 @@ How to Scrape Youtube Data using Python.
 1. Go to <a href="https://console.developers.google.com/">console.developers.google.com</a>
 2. Create project
 3. select project
-4. search for youtube api v3
+4. search for youtube data api v3
 5. enable api
 6. Create Credentials
 7. Copy api key

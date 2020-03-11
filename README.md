@@ -10,8 +10,9 @@ How to Scrape Youtube Data using Python.
 3. select project
 4. search for youtube data api v3
 5. enable api
-6. Create Credentials
-7. Copy api key
+6. Go to Credentials in left nav.
+7. Cretae Credentials and select api key
+8. Copy api key
 
 ### Step 2: Get youtube channel id
 1. Go to youtube channel

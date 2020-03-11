@@ -1,5 +1,3 @@
-
-%%capture
 !pip install google-api-python-client
 
 from apiclient.discovery import build

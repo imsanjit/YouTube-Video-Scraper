@@ -50,11 +50,11 @@ all_Yt_Details = []
 
 for i, video in enumerate(videos):
     ytDetails = {
-        "ID" : i+1,
+        "Sno." : i+1,
         "Video_ID" : video['snippet']['resourceId']['videoId'],
         "URL" : f"https://www.youtube.com/watch?v={video['snippet']['resourceId']['videoId']}",
         "Title" : video['snippet']['title'],
-        "Published Date": video['snippet']['publishedAt'].split("T")[0]
+        "Published_Date": video['snippet']['publishedAt'].split("T")[0]
 
     }
     all_Yt_Details.append(ytDetails)

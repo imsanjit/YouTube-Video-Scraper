@@ -7,10 +7,13 @@ import json
 import csv
 from google.colab import files
 
-api_key = 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'  # Add your "youtube api v3"api key here
-channel_id = 'YYYYYYYYYYYYYYYYYYYYYYYYYY' #channel ID
+# taking input from user for youtube api key and youtube channel id
 
-## Get upload playlist id
+api_key = input('Enter your youtube API Key here: \n')  # Add your "youtube api v3"api key here
+channel_id = input('\nEnter your youtube chanel ID here: \n')
+
+# Get upload playlist id
+
 yt = build('youtube', 'v3', developerKey= api_key)
 req = yt.channels().list(id= channel_id, part= 'contentDetails').execute()
 
@@ -36,10 +39,13 @@ def get_channel_videos(channel_id):
     
     return videos
 
-videos = get_channel_videos('YYYYYYYYYYYYYYYYYYYYYYYYYY') #Change channel id to get your channel data
-print(f'Total number of video are: {len(videos)}')
+# scraping videos from youtube upload playlist
 
-## get all video from youtube channel in json file
+videos = get_channel_videos(channel_id)
+print(f'\nTotal number of video are: {len(videos)}')
+
+# get all video from youtube channel in json file
+
 all_Yt_Details = []
 
 for i, video in enumerate(videos):
@@ -58,6 +64,9 @@ with open('youtube_data.json', 'w') as f:
 files.download("youtube_data.json")
 
 ## get all video from youtube channel in excel file
+
 data = pd.read_json('/content/youtube_data.json')
 data.to_csv('youtube_data.csv', index= False)
 files.download("youtube_data.csv")
+
+print('\n\nFile Downloaded')

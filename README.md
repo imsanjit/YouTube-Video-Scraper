@@ -21,5 +21,5 @@ How to Scrape Youtube Data using Python.
 **Example:** If your youtube channel link is https://www.youtube.com/channel/UCx8Z14PpntdaxC, pick **UCx8Z14PpntdaxC**
 
 ### Step 3: Run all the code
-1. Paste your youtube api key(from step 1) in "api_key".
-2. Paste your youtube channel id
+1. Enter your youtube api key (from step 1) to code
+2. Enter your youtube ID (from step 2) to code

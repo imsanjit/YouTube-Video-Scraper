@@ -2,7 +2,7 @@
 How to Scrape Youtube Data using Python.
 
 
-**Note:** Use <a href="https://colab.research.google.com/">google colab</a> to run python code
+**Note:** Use <a href="https://colab.research.google.com/">google colab</a> to run the code
 
 ### Step 1: Get your youtube API key
 1. Go to <a href="https://console.developers.google.com/">console.developers.google.com</a>

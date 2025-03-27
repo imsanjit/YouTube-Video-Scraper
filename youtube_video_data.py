@@ -54,6 +54,8 @@ for i, video in enumerate(videos):
         "Video_ID" : video['snippet']['resourceId']['videoId'],
         "URL" : f"https://www.youtube.com/watch?v={video['snippet']['resourceId']['videoId']}",
         "Title" : video['snippet']['title'],
+        "Description" : video['snippet']['description'],
+        "Thumbnails" : video['snippet']['thumbnails']['default']['url'],
         "Published_Date": video['snippet']['publishedAt'].split("T")[0]
 
     }

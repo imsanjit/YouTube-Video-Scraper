@@ -1,4 +1,4 @@
-!pip install google-api-python-client
+# !pip install google-api-python-client
 
 #Importing required libraries
 from apiclient.discovery import build
@@ -61,14 +61,14 @@ for i, video in enumerate(videos):
     }
     all_Yt_Details.append(ytDetails)
 
-with open('youtube_data.json', 'w') as f:
-    json.dump(all_Yt_Details, f, indent=4)
+with open('youtube_data.json', 'w', encoding='utf-8') as f:
+    json.dump(all_Yt_Details, f, ensure_ascii = False, indent = 2)
 files.download("youtube_data.json")
 
 ## get all video from youtube channel in excel file
 
 data = pd.read_json('/content/youtube_data.json')
-data.to_csv('youtube_data.csv', index= False)
+data.to_csv('youtube_data.csv', index = False, encoding = 'utf-8')
 files.download("youtube_data.csv")
 
 print('\n\nFile Downloaded')

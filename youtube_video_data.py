@@ -26,7 +26,7 @@ def get_channel_videos(channel_id):
     videos = []
     next_page_token = None
     
-    while 1:
+    while True:
         res = yt.playlistItems().list(playlistId=playlist_id, 
                                            part='snippet', 
                                            maxResults=50,
